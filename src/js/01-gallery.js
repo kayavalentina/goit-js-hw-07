@@ -3,7 +3,7 @@ import { galleryItems } from './gallery-items.js';
 const container = document.querySelector('.gallery');
  
 const markup = createMarkup(galleryItems);
-//console.log(markup);
+
 container.insertAdjacentHTML('beforeend', markup);
 container.addEventListener('click', handlerProductClick);
 
@@ -24,15 +24,13 @@ function handlerProductClick(event) {
         return;
      }
     event.preventDefault();
-    const targetElement = event.target.closest('.gallery__item');
-    
+     
     const instance = basicLightbox.create(`
     <div class="modal">
-
+     <img src="${event.target.dataset.source}" alt="${event.target.alt}" />
     </div>
     `)
     instance.show();
 }
-
 
 console.log(galleryItems);
