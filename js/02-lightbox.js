@@ -24,6 +24,7 @@ function createMarkup(arr) {
     })
     .join('');
 }
+
 function openModal(event) {
     event.preventDefault();
 }
