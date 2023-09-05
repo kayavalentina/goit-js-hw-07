@@ -24,8 +24,4 @@ function createMarkup(arr) {
     })
     .join('');
 }
-function openModal(event) {
-    event.preventDefault();
-}
-    
-console.log(galleryItems);
+
